@@ -12,16 +12,24 @@
   <% end %>
 
   <div class="field">
+
+    <!-- labelタグを生成する。
+    #「:テキスト」で画面上に内容が表示される
+    #※表示されるときは先頭の文字が大文字で表示される -->
     <%= form.label :title %>
+
+    <!-- inputタグのtextボックスを作成する -->
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :contet %>
-    <%= form.text_area :contet %>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
   </div>
 
   <div class="actions">
+  <!-- 送信ボタンを作成する。-->
+  <!-- ※ヘルパーの中でテキストの指定がない場合は、「Save forｍの名前」となる。-->
     <%= form.submit %>
   </div>
 <% end %>
